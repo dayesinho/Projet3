@@ -36,7 +36,8 @@ class Game {
         
     for _ in 1...3 {
         repeat {
-            addCharacterPlayer1()
+            print("JOUEUR 1")
+            addCharacterPlayer()
         repeat {
             choicePlayer1 = inputInt()
             } while choicePlayer1 != 1 && choicePlayer1 != 2 && choicePlayer1 != 3 && choicePlayer1 != 4
@@ -61,7 +62,8 @@ class Game {
                 break
             }
             repeat {
-                addCharacterPlayer2()
+                print("JOUEUR 2")
+                addCharacterPlayer()
                 repeat {
                     choicePlayer2 = inputInt()
                 } while choicePlayer2 != 1 && choicePlayer2 != 2 && choicePlayer2 != 3 && choicePlayer2 != 4
@@ -94,10 +96,12 @@ class Game {
         
         func compositionTeams() {
                     print("===============================")
+                    print("L'équipe n°1 est composée de:")
                 for perso1 in team1 {
                     print(perso1.descriptionCharacter())
                     print("===============================")
-                            
+                    
+                    print("L'équipe n°2 est composée de:")
                 for perso2 in team2 {
                     print(perso2.descriptionCharacter())
                     print("===============================")
@@ -116,27 +120,12 @@ class Game {
         print("===============================")
     }
     
-    // Menu to select characters for player1:
+    // Menu to select characters for both players:
     
-    func addCharacterPlayer1() {
+    func addCharacterPlayer() {
         
-        print("JOUEUR 1")
         print("===============================")
         print("Merci de sélectionner l'un des personnages suivants:")
-        print("1 - Le combattant")
-        print("2 - Le mage")
-        print("3 - Le colosse")
-        print("4 - Le nain")
-        print("===============================")
-    }
-    
-    // Menu to select characters for player2:
-    
-    func addCharacterPlayer2() {
-        
-        print("JOUEUR 2")
-        print("===============================")
-        print("A votre tour de sélectionner l'un des personnages suivants:")
         print("1 - Le combattant")
         print("2 - Le mage")
         print("3 - Le colosse")
@@ -151,5 +140,3 @@ class Game {
         readLine()
         }
 }
-
-
