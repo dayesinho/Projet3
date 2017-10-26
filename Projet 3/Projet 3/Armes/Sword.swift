@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  sword.swift
 //  Projet 3
 //
 //  Created by Mac Hack on 17/10/2017.
@@ -8,5 +8,10 @@
 
 import Foundation
 
-let game = Game()
-game.start()
+class Epée: Weapon {
+    
+    init() {
+        super.init(damage: 10)
+    }
+}
+

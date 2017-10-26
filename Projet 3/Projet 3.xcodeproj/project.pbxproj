@@ -8,15 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0173BFB41F966E5100987D0A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFB31F966E5100987D0A /* main.swift */; };
-		0173BFBC1F966F3400987D0A /* combattant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBB1F966F3400987D0A /* combattant.swift */; };
-		0173BFBE1F966F5800987D0A /* mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBD1F966F5800987D0A /* mage.swift */; };
-		0173BFC01F966F6700987D0A /* colosse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBF1F966F6700987D0A /* colosse.swift */; };
-		0173BFC21F966F7300987D0A /* nain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC11F966F7300987D0A /* nain.swift */; };
-		0173BFC41F966FBC00987D0A /* class characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC31F966FBC00987D0A /* class characters.swift */; };
-		0173BFC71F96713200987D0A /* sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC61F96713200987D0A /* sword.swift */; };
-		0173BFCA1F9672E900987D0A /* class weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC91F9672E900987D0A /* class weapons.swift */; };
-		0173BFCC1F9673A600987D0A /* hammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFCB1F9673A600987D0A /* hammer.swift */; };
-		0173BFCE1F9673F100987D0A /* ax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFCD1F9673F100987D0A /* ax.swift */; };
+		0173BFBC1F966F3400987D0A /* Combattant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBB1F966F3400987D0A /* Combattant.swift */; };
+		0173BFBE1F966F5800987D0A /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBD1F966F5800987D0A /* Mage.swift */; };
+		0173BFC01F966F6700987D0A /* Colosse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBF1F966F6700987D0A /* Colosse.swift */; };
+		0173BFC21F966F7300987D0A /* Nain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC11F966F7300987D0A /* Nain.swift */; };
+		0173BFC41F966FBC00987D0A /* Class Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC31F966FBC00987D0A /* Class Character.swift */; };
+		0173BFC71F96713200987D0A /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC61F96713200987D0A /* Sword.swift */; };
+		0173BFCA1F9672E900987D0A /* Class Weapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFC91F9672E900987D0A /* Class Weapons.swift */; };
+		0173BFCC1F9673A600987D0A /* Hammer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFCB1F9673A600987D0A /* Hammer.swift */; };
+		0173BFCE1F9673F100987D0A /* Ax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFCD1F9673F100987D0A /* Ax.swift */; };
+		01B88B561F9F2E440056C5B0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B88B551F9F2E440056C5B0 /* Game.swift */; };
+		01B88B581F9FFAE40056C5B0 /* Scepter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B88B571F9FFAE40056C5B0 /* Scepter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,15 +36,17 @@
 /* Begin PBXFileReference section */
 		0173BFB01F966E5100987D0A /* Projet 3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Projet 3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0173BFB31F966E5100987D0A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		0173BFBB1F966F3400987D0A /* combattant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = combattant.swift; sourceTree = "<group>"; };
-		0173BFBD1F966F5800987D0A /* mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mage.swift; sourceTree = "<group>"; };
-		0173BFBF1F966F6700987D0A /* colosse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colosse.swift; sourceTree = "<group>"; };
-		0173BFC11F966F7300987D0A /* nain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nain.swift; sourceTree = "<group>"; };
-		0173BFC31F966FBC00987D0A /* class characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "class characters.swift"; sourceTree = "<group>"; };
-		0173BFC61F96713200987D0A /* sword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sword.swift; sourceTree = "<group>"; };
-		0173BFC91F9672E900987D0A /* class weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "class weapons.swift"; sourceTree = "<group>"; };
-		0173BFCB1F9673A600987D0A /* hammer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hammer.swift; sourceTree = "<group>"; };
-		0173BFCD1F9673F100987D0A /* ax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ax.swift; sourceTree = "<group>"; };
+		0173BFBB1F966F3400987D0A /* Combattant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combattant.swift; sourceTree = "<group>"; };
+		0173BFBD1F966F5800987D0A /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
+		0173BFBF1F966F6700987D0A /* Colosse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colosse.swift; sourceTree = "<group>"; };
+		0173BFC11F966F7300987D0A /* Nain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nain.swift; sourceTree = "<group>"; };
+		0173BFC31F966FBC00987D0A /* Class Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class Character.swift"; sourceTree = "<group>"; };
+		0173BFC61F96713200987D0A /* Sword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
+		0173BFC91F9672E900987D0A /* Class Weapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class Weapons.swift"; sourceTree = "<group>"; };
+		0173BFCB1F9673A600987D0A /* Hammer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hammer.swift; sourceTree = "<group>"; };
+		0173BFCD1F9673F100987D0A /* Ax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ax.swift; sourceTree = "<group>"; };
+		01B88B551F9F2E440056C5B0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		01B88B571F9FFAE40056C5B0 /* Scepter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scepter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				0173BFB31F966E5100987D0A /* main.swift */,
+				01B88B551F9F2E440056C5B0 /* Game.swift */,
 				0173BFBA1F966EBF00987D0A /* Personnages */,
 				0173BFC51F96710900987D0A /* Armes */,
 			);
@@ -85,11 +90,11 @@
 		0173BFBA1F966EBF00987D0A /* Personnages */ = {
 			isa = PBXGroup;
 			children = (
-				0173BFC31F966FBC00987D0A /* class characters.swift */,
-				0173BFBB1F966F3400987D0A /* combattant.swift */,
-				0173BFBD1F966F5800987D0A /* mage.swift */,
-				0173BFBF1F966F6700987D0A /* colosse.swift */,
-				0173BFC11F966F7300987D0A /* nain.swift */,
+				0173BFC31F966FBC00987D0A /* Class Character.swift */,
+				0173BFBB1F966F3400987D0A /* Combattant.swift */,
+				0173BFBD1F966F5800987D0A /* Mage.swift */,
+				0173BFBF1F966F6700987D0A /* Colosse.swift */,
+				0173BFC11F966F7300987D0A /* Nain.swift */,
 			);
 			path = Personnages;
 			sourceTree = "<group>";
@@ -97,10 +102,11 @@
 		0173BFC51F96710900987D0A /* Armes */ = {
 			isa = PBXGroup;
 			children = (
-				0173BFC91F9672E900987D0A /* class weapons.swift */,
-				0173BFC61F96713200987D0A /* sword.swift */,
-				0173BFCD1F9673F100987D0A /* ax.swift */,
-				0173BFCB1F9673A600987D0A /* hammer.swift */,
+				0173BFC91F9672E900987D0A /* Class Weapons.swift */,
+				0173BFC61F96713200987D0A /* Sword.swift */,
+				01B88B571F9FFAE40056C5B0 /* Scepter.swift */,
+				0173BFCD1F9673F100987D0A /* Ax.swift */,
+				0173BFCB1F9673A600987D0A /* Hammer.swift */,
 			);
 			path = Armes;
 			sourceTree = "<group>";
@@ -163,16 +169,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0173BFC01F966F6700987D0A /* colosse.swift in Sources */,
-				0173BFC41F966FBC00987D0A /* class characters.swift in Sources */,
-				0173BFCE1F9673F100987D0A /* ax.swift in Sources */,
-				0173BFCA1F9672E900987D0A /* class weapons.swift in Sources */,
-				0173BFC21F966F7300987D0A /* nain.swift in Sources */,
-				0173BFC71F96713200987D0A /* sword.swift in Sources */,
+				01B88B561F9F2E440056C5B0 /* Game.swift in Sources */,
+				0173BFC01F966F6700987D0A /* Colosse.swift in Sources */,
+				0173BFC41F966FBC00987D0A /* Class Character.swift in Sources */,
+				0173BFCE1F9673F100987D0A /* Ax.swift in Sources */,
+				0173BFCA1F9672E900987D0A /* Class Weapons.swift in Sources */,
+				0173BFC21F966F7300987D0A /* Nain.swift in Sources */,
+				0173BFC71F96713200987D0A /* Sword.swift in Sources */,
 				0173BFB41F966E5100987D0A /* main.swift in Sources */,
-				0173BFCC1F9673A600987D0A /* hammer.swift in Sources */,
-				0173BFBC1F966F3400987D0A /* combattant.swift in Sources */,
-				0173BFBE1F966F5800987D0A /* mage.swift in Sources */,
+				0173BFCC1F9673A600987D0A /* Hammer.swift in Sources */,
+				0173BFBC1F966F3400987D0A /* Combattant.swift in Sources */,
+				01B88B581F9FFAE40056C5B0 /* Scepter.swift in Sources */,
+				0173BFBE1F966F5800987D0A /* Mage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
