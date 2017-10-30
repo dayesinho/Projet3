@@ -12,7 +12,7 @@ class Hache: Weapon {
     
     //Mark - Init
     init() {
-        super.init(damage: 10)
+        super.init(damage: 5)
     }
 }
 

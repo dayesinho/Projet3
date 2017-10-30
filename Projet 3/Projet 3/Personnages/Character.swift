@@ -13,7 +13,7 @@ import Foundation
 class Character {
     let name: String
     var life: Int
-    var lifeMax: Int
+    let lifeMax: Int
     var weapon: Weapon
     
 
@@ -42,10 +42,8 @@ class Character {
     // Description of the Characters:
     
     func descriptionCharacter() {
-        print("Npm du personnage: \(name)")
-        print("Points de vie: \(life)")
-        print("Arme: \(weapon)")
-        print("Dégats de l'arme: \(weapon.damage)")
+        print("D'un \(name) avec \(life) points de vie et avec une arme qui provoque \(weapon.damage) de dégats à son adversaire.")
     }
 }
+
 

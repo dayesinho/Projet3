@@ -12,7 +12,7 @@ class Marteau: Weapon {
     
     //Mark - Init
     init() {
-        super.init(damage: 20)
+        super.init(damage: 25)
     }
 }
 

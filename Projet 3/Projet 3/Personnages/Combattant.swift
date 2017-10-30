@@ -12,7 +12,7 @@ class Combattant: Character {
     
     // MARK - Init
     init() {
-        super.init(name: "combattant", life: 100, lifeMax: 100, weapon: Epée())
+        super.init(name: "Combattant", life: 100, lifeMax: 100, weapon: Epée())
     }
 }
 

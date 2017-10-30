@@ -20,13 +20,17 @@ class Mage: Character {
         print("Ce personnage ne peut pas attaquer")
     }
     
-    func care(target: Character) {
+    override func descriptionCharacter() {
+        print("D'un Mage avec 100 points de vie, mais qui n'attaque pas les adversaires. Il pourra en revanche soigner les membres de votre propre équipe.")
+    }
+    
+    func care() {
         self.life += 8
         
         if life > lifeMax {
             life = lifeMax
         }
     }
-}
 
+}
 
