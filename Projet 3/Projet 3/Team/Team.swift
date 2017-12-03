@@ -8,20 +8,23 @@
 
 import Foundation
 
-//Array which contains the characters chosen
-
 class Team {
 
     // Array to store the characters:
     
     var characters = [Character]()
 
-    // Methods:
+    // Method to descript the members of a team, the life and the damage that he can do:
     
     func teamDescription() {
         
         for i in 0..<characters.count {
-            print("\(i + 1) " + characters[i].name + " Type de personnage: \(characters[i].type) / " + " Points de vie: \(characters[i].life) / " + "Points de dégats provoqués par son arme: \(characters[i].weapon.damage)")
+            
+            if characters[i].life > 1 {
+            print("\(i + 1) " + " \(characters[i].name) |" + " Type du personnage: \(characters[i].type) | " + " Points de vie: \(characters[i].life) | " + "Points de dégats provoqués par son arme: \(characters[i].weapon.damage)")
+            } else {
+            print("\(characters[i].name) est mort et ne peut plus être utilisé")
+            }
         }
     }
 }

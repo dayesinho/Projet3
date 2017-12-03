@@ -10,15 +10,19 @@ import Foundation
 
 class Mage: Character {
     
-    // MARK - Init
+    // Init:
+    
     init(name: String) {
         super.init(name: name, life: 100, lifeMax: 100, weapon: Scepter(), type: "Mage")
     }
     
-    // Methods:
+    // Override of the method inflictDamage, to be sure that the mage can't attack:
+    
     override func inflictDamage(target: Character) {
         print("Ce personnage ne peut pas attaquer")
     }
+    
+    // Method that allows a Mage cares a member of his own team:
     
     func care(target: Character) {
         

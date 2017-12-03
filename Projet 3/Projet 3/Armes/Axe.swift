@@ -10,7 +10,8 @@ import Foundation
 
 class Axe: Weapon {
     
-    //Mark - Init
+     // Init:
+    
     init() {
         super.init(damage: 5)
     }

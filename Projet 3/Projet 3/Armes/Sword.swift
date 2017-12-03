@@ -10,6 +10,8 @@ import Foundation
 
 class Sword: Weapon {
     
+    // Init:
+    
     init() {
         super.init(damage: 10)
     }

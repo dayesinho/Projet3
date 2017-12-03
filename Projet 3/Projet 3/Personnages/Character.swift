@@ -34,10 +34,16 @@ class Character {
     func inflictDamage(target: Character) {
         
         if self.life > 0 {
-            target.life -= self.weapon.damage
-            } else if self.life < 0 {
-            target.life = 0
-            print("Je ne peux pas attaquer, je suis mort :(")
+            if target.life > 0 {
+                target.life -= self.weapon.damage
+                if target.life <= 0 {
+                    target.life = 0
+                }
+            } else {
+                print("La cible est déjà morte")
+            }
+        } else {
+            print(self.name + " ne peux pas attaquer, car il est mort")
         }
     }
 }

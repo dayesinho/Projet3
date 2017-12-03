@@ -10,7 +10,8 @@ import Foundation
 
 class Scepter: Weapon {
     
-    //Mark - Init
+     // Init:
+    
     init() {
         super.init(damage: 0)
     }

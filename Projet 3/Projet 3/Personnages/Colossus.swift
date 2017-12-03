@@ -10,7 +10,8 @@ import Foundation
 
 class Colossus: Character {
     
-    // MARK - Init
+    // Init:
+    
     init(name: String) {
         super.init(name: name, life: 90, lifeMax: 90, weapon: Axe(), type: "Colosse")
     }

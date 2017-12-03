@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		010CE1501FA883B900397544 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010CE14F1FA883B900397544 /* Team.swift */; };
+		01610A141FCFF383000E9C23 /* Crossbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01610A131FCFF383000E9C23 /* Crossbow.swift */; };
+		01610A161FD00E1A000E9C23 /* MagicScepter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01610A151FD00E1A000E9C23 /* MagicScepter.swift */; };
 		0173BFB41F966E5100987D0A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFB31F966E5100987D0A /* main.swift */; };
 		0173BFBC1F966F3400987D0A /* Warrior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBB1F966F3400987D0A /* Warrior.swift */; };
 		0173BFBE1F966F5800987D0A /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0173BFBD1F966F5800987D0A /* Mage.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		010CE14F1FA883B900397544 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		01610A131FCFF383000E9C23 /* Crossbow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossbow.swift; sourceTree = "<group>"; };
+		01610A151FD00E1A000E9C23 /* MagicScepter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicScepter.swift; sourceTree = "<group>"; };
 		0173BFB01F966E5100987D0A /* Projet 3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Projet 3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0173BFB31F966E5100987D0A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0173BFBB1F966F3400987D0A /* Warrior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Warrior.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				01B88B571F9FFAE40056C5B0 /* Scepter.swift */,
 				0173BFCD1F9673F100987D0A /* Axe.swift */,
 				0173BFCB1F9673A600987D0A /* Hammer.swift */,
+				01610A131FCFF383000E9C23 /* Crossbow.swift */,
+				01610A151FD00E1A000E9C23 /* MagicScepter.swift */,
 			);
 			path = Armes;
 			sourceTree = "<group>";
@@ -183,12 +189,14 @@
 				01B88B561F9F2E440056C5B0 /* Game.swift in Sources */,
 				0173BFC01F966F6700987D0A /* Colossus.swift in Sources */,
 				010CE1501FA883B900397544 /* Team.swift in Sources */,
+				01610A161FD00E1A000E9C23 /* MagicScepter.swift in Sources */,
 				0173BFC41F966FBC00987D0A /* Character.swift in Sources */,
 				0173BFCE1F9673F100987D0A /* Axe.swift in Sources */,
 				0173BFCA1F9672E900987D0A /* Weapon.swift in Sources */,
 				0173BFC21F966F7300987D0A /* Dwarf.swift in Sources */,
 				0173BFC71F96713200987D0A /* Sword.swift in Sources */,
 				0173BFB41F966E5100987D0A /* main.swift in Sources */,
+				01610A141FCFF383000E9C23 /* Crossbow.swift in Sources */,
 				0173BFCC1F9673A600987D0A /* Hammer.swift in Sources */,
 				0173BFBC1F966F3400987D0A /* Warrior.swift in Sources */,
 				01B88B581F9FFAE40056C5B0 /* Scepter.swift in Sources */,

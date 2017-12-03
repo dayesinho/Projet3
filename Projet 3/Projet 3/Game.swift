@@ -14,7 +14,8 @@ class Game {
     // Var:
     
     var teamArray = [Team]()
-    
+    var uniqueCharacterNameArray = [String]()
+    var startGameDate = NSDate()
     
     // Methods:
     
@@ -34,29 +35,6 @@ class Game {
         guard let data = readLine() else { return "" }
         return data
     }
-    
-    // Method in case of repeated names on characters:
-    
-    func repeatedNameCharacters() {
-        
-        // Var:
-        var nameCharacters: String
-        var nameCharactersArray = [String]()
-        
-        // Method:
-        
-        nameCharacters = inputString()
-        nameCharactersArray.append(nameCharacters)
-        
-        for nameCharacters in nameCharactersArray {
-            if nameCharacters != nameCharacters {
-                print("")
-            } else {
-                print("Ce nom est déjà choisi, veuillez sélectionner un autre")
-                return repeatedNameCharacters()
-            }
-        }
-    }
 
     // Start of the game:
     
@@ -68,16 +46,19 @@ class Game {
         print("===============================")
         
         for i in 0..<2 {
+            print("")
+            print("===============================")
             print("Constitution de l'équipe du joueur \(i + 1):")
+            print("")
             let team = Team()
             team.characters = createCharacters()
             teamArray.append(team)
         }
         print("")
         print("Les 2 équipes sont constituées!")
-        print("")
         
         roundFight()
+        showGameSettings()
     }
     
     // Method to create characters:
@@ -86,7 +67,7 @@ class Game {
         var characters = [Character]()
         
         var userChoice = 0
-        let nameCharacters = String()
+        var nameCharacters = String()
         
         for i in 0..<3 {
             print("Choisissez votre personnage n°\(i + 1)")
@@ -101,7 +82,13 @@ class Game {
             
             print("Merci de donner un nom à votre personnage:")
             repeat {
-                repeatedNameCharacters()
+                nameCharacters = inputString()
+                if uniqueCharacterNameArray.contains(nameCharacters) {
+                    print("Ce nom est déjà choisi. Merci d'en sélectionner un autre:")
+                    nameCharacters = ""
+                } else {
+                    uniqueCharacterNameArray.append(nameCharacters)
+                }
             } while nameCharacters == ""
             
             switch userChoice {
@@ -134,9 +121,11 @@ class Game {
             repeat {
                 for i in 0..<2 {
                     print("")
+                    print("======================")
                     print("Equipe n°\(i + 1) à vous de jouer")
                     print("Veuillez sélectionner un personnage de votre équipe:")
                     print("")
+                    
                     teamArray[i].teamDescription()
                     userChoice = 0
                     repeat {
@@ -144,6 +133,8 @@ class Game {
                     } while  userChoice != 1 && userChoice != 2 && userChoice != 3
                     characterSelected = teamArray[i].characters[userChoice - 1]
                     guard let currentCharacter = characterSelected else {return}
+                    
+                    chest(target: currentCharacter)
                     
                     if let character = currentCharacter as? Mage {
                       
@@ -159,8 +150,12 @@ class Game {
                             userChoice = inputInt()
                         } while  userChoice != 1 && userChoice != 2 && userChoice != 3
                         character.care(target: teamArray[i].characters[userChoice - 1])
-                        print("Votre personnage a été soigné et a à présent \(currentCharacter.life) points de vie")
+                        
+                        print("Votre personnage a été soigné et a dorénavant \(teamArray[i].characters[userChoice - 1].life) points de vie")
                     } else {
+                        
+                        // If the character is a fighter:
+                        
                         print("")
                         print("Quel personnage de l'équipe adverse souhaitez vous attaquer?")
                         print("")
@@ -172,6 +167,13 @@ class Game {
                                 userChoice = inputInt()
                             } while userChoice != 1 && userChoice != 2 && userChoice != 3
                             currentCharacter.inflictDamage(target: teamArray[i + 1].characters[userChoice - 1])
+                            
+                            print("Le personnage que vous venez d'attaquer, se retrouve à présent avec \(teamArray[i + 1].characters[userChoice - 1].life) points de vie")
+                            
+                            if checkDeadCharacters(team: teamArray[i + 1]) {
+                                return // pour sortir de la fonction
+                            }
+                            
                         } else {
                             teamArray[i - 1].teamDescription()
                             userChoice = 0
@@ -179,10 +181,16 @@ class Game {
                             userChoice = inputInt()
                             } while userChoice != 1 && userChoice != 2 && userChoice != 3
                             currentCharacter.inflictDamage(target: teamArray[i - 1].characters[userChoice - 1])
+                            
+                            print("Le personnage que vous venez d'attaquer, se retrouve à présent avec \(teamArray[i - 1].characters[userChoice - 1].life) points de vie")
+                            
+                            if checkDeadCharacters(team: teamArray[i - 1]) {
+                                return
+                            }
                         }
                     }
                 }
-            } while teamArray.count != 1
+            } while true
         } else {
             print("")
             print("Désolé, il faut au minimum 2 équipes pour pouvoir démarrer la partie")
@@ -190,21 +198,81 @@ class Game {
             }
         }
     
+    // Method that allows a chest appear on the game and give a new weapon or new powers to a Mage:
+    
     func chest(target: Character) {
         
-        let random = Int(arc4random_uniform(UInt32(2)))
+        let random = arc4random_uniform(5)
         
         if random == 1 {
-            print("")
-            print("un coffre est apparu, souhaitez vous l'ouvrir ?")
-            print("\n1 Oui")
-            print("\n2 Non")
+            print("***********************")
+            print("*** Un mistérieux coffre est apparu! ***")
             print("")
             
-            var playerChoice = inputInt()
-            
-            
+            if target is Mage {
+                let magicScepter = MagicScepter()
+                target.weapon = magicScepter
+                print("\(target.name)" + "bénéficie a présent de pouvoir supplémentaires pour guérir les personnages de son équipe")
+                print("***********************")
+            } else {
+                let crossbow = Crossbow()
+                target.weapon = crossbow
+                print(target.name + " ouvre le coffre et s'équipe d'une arbalète" )
+                print("Ses points de dégats sont à présent de \(target.weapon.damage)")
+                print("***********************")
+            }
         }
+    }
+    
+    // Method to calculate the duration in hours and minutes of the game:
+    
+    func showTimer(startGameDate: NSDate) -> String {
+        
+        // Var:
+        
+        let interval = NSDate().timeIntervalSince(startGameDate as Date) 
+        
+        let dateFormatter = DateComponentsFormatter()
+        dateFormatter.unitsStyle = .short
+        
+        guard let timer = dateFormatter.string(from: interval) else { return "" }
+        return timer
+    }
+    
+    // Method to indicate the winner of the game and show the duration of the game:
+    
+    func showGameSettings() {
+        
+        var winnerTeam : String?
+        
+        if checkDeadCharacters(team: teamArray[0]) {
+            winnerTeam = "équipe n°2"
+        } else {
+            winnerTeam = "équipe n°1"
+        }
+        guard let winner = winnerTeam else { return }
+        print("La partie a été remportée par l'" + winner)
+        
+        print("La partie a durée: " + showTimer(startGameDate: startGameDate))
+    }
+    
+    // Method to check if all the characters of a team are deads and allows exit of the while loop:
+    
+    func checkDeadCharacters(team: Team) -> Bool {
+        
+        var teamIsDead = false
+        
+        for i in 0..<team.characters.count {
+            let character = team.characters[i]
+            
+            if character.life == 0 {
+                teamIsDead = true
+            } else {
+                return false
+            }
+        }
+        
+        return teamIsDead
     }
 }
 
